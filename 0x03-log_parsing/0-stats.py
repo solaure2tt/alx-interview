@@ -64,13 +64,13 @@ try:
             if lineSpl[-2] in dict_sc.keys():
                 dict_sc[lineSpl[-2]] += 1
             if nblines == 10:
-                print("File size: {}".format(nblines))
+                print("File size: {}".format(file_size))
                 for key, val in sorted(dict_sc.items()):
                     if val != 0:
                         print("{}: {}".format(key, val))
                 nblines = 0
 finally:
-    print("File size: {}".format(nblines))
+    print("File size: {}".format(file_size))
     for key, val in sorted(dict_sc.items()):
         if val != 0:
             print("{}: {}".format(key, val))
