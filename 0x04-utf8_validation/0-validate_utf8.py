@@ -13,6 +13,6 @@ def validUTF8(data):
           True or False
     """
     for i in range(len(data)):
-        if data[i] > 255:
+        if isinstance(data[i], int) == False or data[i] > 255:
             return False
     return True
